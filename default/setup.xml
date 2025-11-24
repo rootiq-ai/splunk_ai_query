@@ -1,0 +1,45 @@
+<setup>
+  <block title="OpenAI Configuration">
+    <input field="openai_api_key">
+      <label>OpenAI API Key</label>
+      <type>password</type>
+    </input>
+    <input field="openai_model">
+      <label>OpenAI Model</label>
+      <type>text</type>
+      <default>gpt-4</default>
+    </input>
+  </block>
+  
+  <block title="Default Index Configuration">
+    <input field="default_indexes">
+      <label>Default Indexes (comma-separated)</label>
+      <type>text</type>
+      <default>main</default>
+    </input>
+    <input field="default_fields">
+      <label>Default Fields (comma-separated)</label>
+      <type>text</type>
+      <default>host,source,sourcetype</default>
+    </input>
+  </block>
+  
+  <block title="Query Settings">
+    <input field="max_results">
+      <label>Maximum Results</label>
+      <type>text</type>
+      <default>1000</default>
+    </input>
+    <input field="default_time_range">
+      <label>Default Time Range</label>
+      <type>dropdown</type>
+      <options>
+        <opt value="-1h">Last Hour</opt>
+        <opt value="-24h">Last 24 Hours</opt>
+        <opt value="-7d">Last 7 Days</opt>
+        <opt value="-30d">Last 30 Days</opt>
+      </options>
+      <default>-24h</default>
+    </input>
+  </block>
+</setup>
